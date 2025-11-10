@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Capstone</title>
+    <link rel="stylesheet" href="index.css"
+</head>
+<body>
+    <!-- Top Navigation -->
+    <div class="top-nav">
+        <span class="menu-icon">☰</span>
+        <h1>CAPSTONE</h1>
+        <span></span>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Reports Header -->
+        <div class="reports-header">
+            <span class="back-arrow">←</span>
+            <span class="chart-icon">📊</span>
+            <div>
+                <h2>Reports</h2>
+                <p>Business summary</p>
+            </div>
+        </div>
+
+        <!-- Search and Filter -->
+        <div class="search-filter">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Search by item, category, or notes...">
+            </div>
+            <button class="filter-btn">
+                All <span>▼</span>
+            </button>
+        </div>
+
+        <!-- Summary Cards -->
+        <div class="summary-cards">
+            <div class="card money-in">
+                <div class="card-icon">💰</div>
+                <div class="card-label">Money In</div>
+                <div class="card-amount">₦0.00</div>
+            </div>
+            <div class="card money-out">
+                <div class="card-icon">💸</div>
+                <div class="card-label">Money Out</div>
+                <div class="card-amount">₦0.00</div>
+            </div>
+            <div class="card profit">
+                <div class="card-icon">✅</div>
+                <div class="card-label">Profit</div>
+                <div class="card-amount">₦0.00</div>
+            </div>
+        </div>
+
+        <!-- No Transactions Message -->
+        <div class="no-transactions">
+            No transactions yet. Start by adding a sale or expense!
+        </div>
+
+        <!-- Chart Section -->
+        <div class="chart-section">
+            <div class="chart-title">Daily Report Chart</div>
+            
+            <div class="chart-container">
+                <div class="y-axis">
+                    <span>₦3,000</span>
+                    <span>₦2,000</span>
+                    <span>₦1,000</span>
+                    <span>0</span>
+                </div>
+                
+                <div class="chart-bars">
+                    <div class="bar sales">
+                        <span class="bar-value">₦2,500</span>
+                    </div>
+                    <div class="bar expenses">
+                        <span class="bar-value">₦1,250</span>
+                    </div>
+                    <div class="bar debt">
+                        <span class="bar-value">₦2,100</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-legend">
+                <div class="legend-item">
+                    <span class="legend-dot sales"></span>
+                    <span>Sales</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot expenses"></span>
+                    <span>Expenses</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot debt"></span>
+                    <span>Debt</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="action-buttons">
+            <button class="action-btn print">
+                🖨️ Print
+            </button>
+            <button class="action-btn export">
+                📄 Export PDF
+            </button>
+            <button class="action-btn whatsapp">
+                📱 Share via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bottom-nav">
+        <div class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span>Home</span>
+        </div>
+        <div class="nav-item active">
+            <span class="nav-icon">📊</span>
+            <span>Reports</span>
+        </div>
+        <div class="nav-item">
+            <span class="nav-icon">🎧</span>
+            <span>Help</span>
+        </div>
+        <div class="nav-item">
+            <span class="nav-icon">⚙️</span>
+            <span>Settings</span>
+        </div>
+    </div>
+
+    <!-- Auth Section -->
+    <div class="auth-section">
+        <button class="signup-btn">Sign up</button>
+        <button class="login-btn">Log in</button>
+    </div>
+</body>
+</html>

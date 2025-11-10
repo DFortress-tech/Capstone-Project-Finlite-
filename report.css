@@ -1,0 +1,443 @@
+  <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Top Navigation */
+        .top-nav {
+            background-color: #2d2d2d;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .top-nav h1 {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        /* Purple Header */
+        .reports-header {
+            background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .back-arrow {
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        .chart-icon {
+            font-size: 32px;
+        }
+
+        .reports-header h2 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .reports-header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* Search and Filter Section */
+        .search-filter {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 200px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 12px 12px 40px;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+        }
+
+        .filter-btn {
+            padding: 12px 30px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 500;
+        }
+
+        /* Summary Cards */
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .card.money-in {
+            background-color: #d4edda;
+        }
+
+        .card.money-out {
+            background-color: #f8d7da;
+        }
+
+        .card.profit {
+            background-color: #cce5ff;
+        }
+
+        .card-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .card-label {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .card-amount {
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .card.money-in .card-amount {
+            color: #155724;
+        }
+
+        .card.money-out .card-amount {
+            color: #721c24;
+        }
+
+        .card.profit .card-amount {
+            color: #004085;
+        }
+
+        /* No Transactions Message */
+        .no-transactions {
+            text-align: center;
+            color: #999;
+            font-size: 13px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Chart Section */
+        .chart-section {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .chart-title {
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .chart-container {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 300px;
+            padding: 20px 0;
+            border-bottom: 2px solid #ddd;
+            position: relative;
+        }
+
+        .y-axis {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            font-size: 11px;
+            color: #999;
+        }
+
+        .chart-bars {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            width: 100%;
+            padding-left: 50px;
+            gap: 20px;
+        }
+
+        .bar {
+            flex: 1;
+            max-width: 120px;
+            border-radius: 8px 8px 0 0;
+            position: relative;
+            transition: transform 0.3s;
+        }
+
+        .bar:hover {
+            transform: translateY(-5px);
+        }
+
+        .bar.sales {
+            background: linear-gradient(180deg, #9575cd 0%, #7e57c2 100%);
+            height: 85%;
+        }
+
+        .bar.expenses {
+            background: linear-gradient(180deg, #ef9a9a 0%, #e57373 100%);
+            height: 55%;
+        }
+
+        .bar.debt {
+            background: linear-gradient(180deg, #4dd0e1 0%, #26c6da 100%);
+            height: 75%;
+        }
+
+        .bar-value {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 11px;
+            color: #666;
+            white-space: nowrap;
+        }
+
+        .chart-legend {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+        }
+
+        .legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .legend-dot.sales {
+            background-color: #9575cd;
+        }
+
+        .legend-dot.expenses {
+            background-color: #ef9a9a;
+        }
+
+        .legend-dot.debt {
+            background-color: #4dd0e1;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 80px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            flex: 1;
+            min-width: 120px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+
+        .action-btn.print {
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        .action-btn.export {
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        .action-btn.whatsapp {
+            background: #25d366;
+            color: white;
+        }
+
+        /* Bottom Navigation */
+        .bottom-nav {
+            background: white;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-around;
+            padding: 12px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            color: #999;
+            font-size: 12px;
+        }
+
+        .nav-item.active {
+            color: #9c27b0;
+        }
+
+        .nav-icon {
+            font-size: 24px;
+        }
+
+        /* Auth Buttons */
+        .auth-section {
+            background: #000;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .signup-btn, .login-btn {
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .signup-btn {
+            background: #0095ff;
+            color: white;
+        }
+
+        .login-btn {
+            background: transparent;
+            color: white;
+            border: 1px solid #444;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-content {
+                padding: 15px;
+            }
+
+            .reports-header h2 {
+                font-size: 22px;
+            }
+
+            .summary-cards {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .chart-container {
+                height: 250px;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .action-btn {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .summary-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .chart-bars {
+                padding-left: 40px;
+            }
+
+            .bar {
+                max-width: 80px;
+            }
+        }
+    </style>
