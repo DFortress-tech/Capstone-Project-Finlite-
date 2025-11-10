@@ -232,11 +232,18 @@ body.page {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
 }
 
-.feature__icon img {
-  width: 4.8rem;
-  height: 4.8rem;
-  margin-bottom: 0.8rem;
-  border-radius: 50%;
+.feature-card__icon {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 2.1rem;
+  background-color: var(--primary-blue-1);
+}
+
+.feature-card__content {
+  display: flex;
+  gap: 1.7rem;
 }
 
 .feature__text {
@@ -281,8 +288,8 @@ body.page {
 }
 
 .icons__image {
-  height: 4px;
-  width: 4px;
+  height: 0.4rem;
+  width: 0.4rem;
 }
 .feature-card__text {
   color: var(--dark-neutral-2);
