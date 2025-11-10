@@ -1,0 +1,331 @@
+:root {
+  /* ========= Base / Neutral Colors ========= */
+  --color-black: #0a0a0a;
+  --color-dark-gray: #626085;
+  --color-gray: #737b9b;
+  --color-mid-gray: #7a7a7a;
+  --color-light-gray: #808080;
+  --color-silver: #949191;
+  --color-soft-gray: #c6c6c6;
+  --color-very-light-gray: #f0f0f0;
+  --color-off-white: #faffe4;
+  --color-white: #ffffff;
+
+  /* ========= Primary & Brand Colors ========= */
+  --color-primary-dark: #0d1b54;
+  --color-primary: #1447e6;
+  --color-primary-light: #155dfc;
+  --color-secondary: #3cab63;
+  --color-secondary-dark: #00a63e;
+  --color-accent: #3cc3df;
+  --color-accent-muted: #3b8a77;
+  --color-accent-light: #5fff96;
+
+  /* ========= Highlight & Supporting Colors ========= */
+  --color-warning: #f7621e;
+  --color-orange-light: #ff9a6c;
+  --color-orange-pale: #ffbea1;
+  --color-orange-text: #82181a;
+  --color-pink: #ff928a;
+  --color-purple: #8979ff;
+  --color-green-pale: #adffc9;
+  --color-green-text: #0d542b;
+  --color-blue-gray: #47517c;
+
+  /* ========= Gradient ========= */
+  --gradient-primary: linear-gradient(
+    121.42deg,
+    #f2f2f2 21.1%,
+    #67d6b8 50.82%,
+    rgba(50, 29, 122, 0.25) 94.87%
+  );
+}
+
+/* GENERAL PRESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* CHANGING THE DEFAULT FONT SIZE TO 10px */
+html {
+  font-size: 62.5%;
+}
+
+/* BODY */
+.page {
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 10rem;
+  align-items: center;
+  gap: 8rem;
+}
+
+/* BEGINNING OF REUSABLE CLASSES */
+
+/* form */
+.form__card {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.form__label {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-size: 2.4rem;
+  color: var(--color-black);
+}
+
+.form__input {
+  width: 100%;
+  padding: 2rem 4.2rem;
+  border-radius: 2rem;
+  border: solid 0.2rem var(--color-silver);
+  background-color: var(--color-very-light-gray);
+  outline: none;
+}
+
+/* ===== buttons ===== */
+.btn {
+  border-radius: 4rem;
+  cursor: pointer;
+  padding: 1.8rem 6rem;
+  font-size: clamp(1.6rem, 1.4rem + 0.6vw, 2rem);
+  font-weight: 400;
+  border: none;
+  transition: all 0.25s ease;
+  width: 100%;
+}
+
+.btn__group {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+  padding: 4rem;
+}
+
+.btn--primary {
+  background: var(--color-primary-dark);
+  color: #fff;
+}
+
+.btn--secondary {
+  background: #fff;
+  color: var(--color-primary-dark);
+  border: 1px solid var(--color-primary-dark);
+  box-shadow: 0px 7.61px 7.61px 0px #00000040 inset;
+}
+
+/* =====insight cards====== */
+.card {
+  max-width: 100%;
+  width: 100%;
+  border-radius: 2.8rem;
+  padding: 1.8rem;
+  gap: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 8.45px 8.45px 0px #00000040 inset;
+  align-items: center;
+  margin-bottom: 6rem;
+}
+
+.card--primary {
+  background: var(--color-green-pale);
+  color: var(--color-green-text);
+  font-size: 2.4rem;
+  font-weight: 400;
+  font-family: Montserrat;
+}
+
+.card--secondary {
+  background-color: var(--color-orange-pale);
+  color: var(--color-orange-text);
+  font-size: 2.4rem;
+  font-weight: 400;
+  font-family: Montserrat;
+}
+
+.card__insight {
+  width: 6rem;
+  height: 6rem;
+}
+
+.card__tip {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+
+/* bottom navigation */
+.nav {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--color-white);
+  align-items: center;
+  justify-content: space-between;
+  height: 8rem;
+  box-shadow: 0px 0px 17.45px 0px #0000001f;
+  z-index: 1000;
+}
+
+
+.nav__item {
+  display: flex;
+  flex-direction: column;
+  max-width: 12rem;
+  width: 100%;
+  height: 100%;
+  gap: 0.6rem;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav__text {
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 2rem;
+  font-weight: 400;
+}
+/* END OF REUSABLE CLASSES */
+
+/* ======= REVENUE SECTION ===== */
+.add-sale__label-group {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 1.4rem;
+}
+
+.icon {
+  width: 3.8rem;
+  height: 3.8rem;
+}
+
+.add-sale__input-group {
+  display: flex;
+  gap: 1rem;
+}
+
+/* ===== BUTTONS ====== */
+.add-sale__button--calc {
+  height: 100%;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: 1.6px solid #0000001a;
+  background-color: var(--color-white);
+}
+
+.add-sale__button-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.add-sale__button-text {
+  font-family: Montserrat;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+/* Bottom Nav Icon */
+.bottom-nav__icon {
+  width: 4rem;
+  height: 4rem;
+}
+
+.page {
+  padding-bottom: 10rem; /* give space equal to or slightly more than the nav height */
+}
+
+
+/* ======= RESPONSIVENESS ====== */
+/* Tablet & medium desktops */
+@media (max-width: 1200px) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* Large phones / small tablets */
+@media (max-width: 900px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+/* Tablets & phablets */
+@media (max-width: 767px) {
+  .page {
+    padding: 4rem 6rem;
+  }
+
+  .card {
+    margin-bottom: 6rem;
+  }
+}
+
+/* General small phones */
+@media (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+
+  .page {
+    padding: 4rem 4rem 10rem; /* leave room for nav */
+  }
+}
+
+/* Smallest phones (344px–430px range) */
+@media (max-width: 430px) {
+  html {
+    font-size: 47%;
+  }
+
+  .page {
+    padding: min(4rem, 8vw) min(3rem, 6vw) 10rem;
+  }
+
+  .form__input {
+    padding: 1.6rem 3rem;
+  }
+
+  .btn {
+    padding: 1.4rem 3rem;
+  }
+
+  .nav {
+    height: 7rem;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .nav__item {
+    gap: 0.3rem;
+  }
+
+  .nav__text {
+    font-size: 1.6rem;
+  }
+
+  .bottom-nav__icon {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .card {
+    margin-bottom: 4rem;
+  }
+}

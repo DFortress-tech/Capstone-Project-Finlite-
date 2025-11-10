@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Phosphor Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="page">
+    <!-- ========== HEADER ========== -->
+    <header class="header">
+      <img src="Icons/Container.png" alt="Brand logo" class="header__logo">
+      <h1 class="header__title">FINLITE</h1>
+
+      <nav class="header__nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="" class="nav__link">Reports</a></li>
+          <li class="nav__item"><a href="" class="nav__link">Settings</a></li>
+          <li class="nav__item"><a href="" class="nav__link">Help</a></li>
+        </ul>
+        <input
+          type="search"
+          class="nav__search"
+          placeholder="Search by item, category..."
+        />
+        <i class="ph ph-list"></i>
+      </nav>
+    </header>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero">
+      <div class="hero__content">
+        <h1 class="hero__title">
+          Simple Bookkeeping Made Easy for Everyday Traders
+        </h1>
+        <p class="hero__description">
+          Record your sales, expenses, and profits — all in one easy-to-use app
+          built for market men, women, and small business owners.
+        </p>
+        <div class="hero__buttons">
+          <button class="btn btn--primary">Login</button>
+          <button class="btn btn--secondary">Learn More</button>
+        </div>
+      </div>
+
+      <img
+        src="Images/LandingPage hero-image.png"
+        alt="Hero Image"
+        class="hero__image"
+      />
+    </section>
+
+    <!-- ========== WHY US SECTION ========== -->
+    <section class="why-us">
+      <h2 class="why-us__title section__title">
+        Why Our Bookkeeping App is Perfect for You
+      </h2>
+      <p class="why-us__description section__description">
+        Managing your daily sales doesn’t have to be stressful. Our bookkeeping
+        web app helps you track every transaction, sales, expenses, and profits
+        even if you’re not tech-savvy.
+        It’s simple, fast, and works offline too!
+      </p>
+
+      <div class="why-us__features">
+        <div class="feature">
+         <img src="Icons/calculator.png" alt="calculator">
+          <p class="feature__text">
+            Built-in Calculator for Quick Price Checks
+          </p>
+        </div>
+        <div class="feature" class="feature__icon">
+          <img src="Icons/Dollar.png" alt="dollar" class="feature__icon">
+          <p class="feature__text">Track Sales & Expenses Easily</p>
+        </div>
+        <div class="feature">
+         <img src="Icons/money.png" alt="moneystack" class="feature__icon">
+          <p class="feature__text">See Daily, Weekly & Monthly Profits</p>
+        </div>
+        <div class="feature">
+          <img src="Icons/Wifi.png" alt="wifi" class="feature__icon">
+          <p class="feature__text">Offline Friendly – Works Anywhere</p>
+        </div>
+        <div class="feature">
+         <img src="Icons/Lock.png" alt="lock" class="feature__icon">
+          <p class="feature__text">Your Records, Safe and Secure</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EVERYTHING NEEDED SECTION ========== -->
+    <section class="features">
+      <h2 class="features__title section__title">
+        Everything You Need to Manage Your Business Finances
+      </h2>
+      <p class="features__description">
+        Designed with traders and market sellers in mind. Fast to use, readable
+        outdoors and simple to teach.
+      </p>
+
+      <div class="features__list">
+        <div class="feature-card">
+          <div class="feature-card__content">
+            <img src="Icons/sales report.png" alt="report" />
+            <p class="feature-card__title">Add Sales & Expenses Quickly</p>
+          </div>
+          <p class="feature-card__text">
+            Record transactions in seconds. No complex setup or internet
+            required.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__content">
+            <img src="Icons/Note.png" alt="note" />
+            <p class="feature-card__title">Automatic Profit Summary</p>
+          </div>
+          <p class="feature-card__text">
+            Know your daily, weekly and monthly profit at a glance.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card__content">
+            <img src="Icons/Safe-Lock.png" alt="safe-lock" />
+            <p class="feature-card__title">Data Privacy & Backup</p>
+          </div>
+          <p class="feature-card__text">
+            Your information stays private and can be backed up securely.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== STEPS SECTION ========== -->
+    <section class="steps">
+      <h2 class="steps__title section__title">
+        3 Simple Steps to Stay on Top of Your Finances
+      </h2>
+      <div class="steps__list">
+        <div class="step">
+          <span class="step__number">1</span>
+          <div class="step__content">
+            <p class="step__title">Add Sales</p>
+            <p class="step__text">Enter your daily transactions quickly.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step__number">2</span>
+          <div class="step__content">
+            <p class="step__title">Track Expenses</p>
+            <p class="step__text">Log purchases, supplies, or any spending.</p>
+          </div>
+        </div>
+        <div class="step">
+          <span class="step__number">3</span>
+          <div class="step__content">
+            <p class="step__title">View Profits</p>
+            <p class="step__text">Instantly see how your business is doing.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA SECTION ========== -->
+    <section class="cta">
+      <h2 class="cta__title section__title">
+        Take Control of Your Business The Smart Way
+      </h2>
+      <p class="cta__description section__description">
+        Join thousands of traders and small business owners keeping track of
+        their money effortlessly.
+      </p>
+      <div class="cta__buttons">
+        <button class="btn btn--primary cta__create">
+          Create Free Account
+        </button>
+        <button class="btn btn--secondary cta__learn">Learn More</button>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+      <p class="footer__text">© Bookkeeper 2025. All rights reserved.</p>
+      <div class="footer__links">
+        <a href="" class="footer__link footer__text">About</a>
+        <a href="" class="footer__link footer__text">Privacy</a>
+      </div>
+    </footer>
+  </body>
+</html>

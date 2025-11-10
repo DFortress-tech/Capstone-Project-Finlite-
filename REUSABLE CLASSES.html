@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form class="add-sale__form" action="">
+      <!-- Revenue Section -->
+      <div class="add-sale__field add-sale__field--revenue">
+        <div class="add-sale__label-group">
+          <img src="Icons/HowMuch.png" alt="how much" class="add-sale__icon" />
+          <label for="revenue" class="add-sale__label"
+            >How much money did you get?</label
+          >
+        </div>
+
+        <div class="add-sale__input-group">
+          <input
+            type="number"
+            placeholder="0.00"
+            id="revenue"
+            name="revenue"
+            class="add-sale__input"
+          />
+          <button type="button" class="add-sale__button add-sale__button--calc">
+            <img
+              src="Icons/Calculator2.png"
+              alt="calculator"
+              class="add-sale__button-icon"
+            />
+            <p class="add-sale__button-text">Calc</p>
+          </button>
+        </div>
+      </div>
+
+      <!-- Product Section -->
+      <div class="add-sale__field add-sale__field--product">
+        <div class="add-sale__label-group">
+          <img
+            src="Icons/WhatYouSold.png"
+            alt="what you sold"
+            class="add-sale__icon"
+          />
+          <label for="product" class="add-sale__label"
+            >What did you sell? (Optional)</label
+          >
+        </div>
+        <input
+          type="text"
+          placeholder="Rice, Clothes, Phone"
+          id="product"
+          name="product"
+          class="add-sale__input"
+        />
+      </div>
+
+      <!-- Extra Notes Section -->
+      <div class="add-sale__field add-sale__field--notes">
+        <div class="add-sale__label-group">
+          <img
+            src="Icons/ExtraNotes.png"
+            alt="extra notes"
+            class="add-sale__icon"
+          />
+          <label for="extraNotes" class="add-sale__label"
+            >Extra notes (Optional)</label
+          >
+        </div>
+        <input
+          type="text"
+          placeholder="Customer name, special details"
+          id="extraNotes"
+          name="extraNotes"
+          class="add-sale__input"
+        />
+      </div>
+    </form>
+  </body>
+</html>

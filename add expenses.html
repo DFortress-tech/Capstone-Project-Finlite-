@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Expenses</title>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Phosphor Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
+
+    <!-- style sheet -->
+    <link rel="stylesheet" href="Sales and Expenses.css" />
+  </head>
+
+  <body class="page">
+    <section class="add-sale">
+      <form class="add-sale__form form__card" action="">
+        <!-- Revenue Section -->
+        <div class="add-sale__field add-sale__field--revenue">
+          <div class="add-sale__label-group">
+            <img
+              src="Icons/HowMuch.png"
+              alt="how much"
+              class="icon"
+            />
+            <label for="revenue" class="add-sale__label form__label"
+              >How much money did you spend?</label
+            >
+          </div>
+
+          <div class="add-sale__input-group">
+            <input
+              type="number"
+              placeholder="0.00"
+              id="revenue"
+              name="revenue"
+              class="add-sale__input form__input"
+            />
+            <button
+              type="button"
+              class="add-sale__button add-sale__button--calc"
+            >
+              <img
+                src="Icons/Calculator2.png"
+                alt="calculator"
+                class="add-sale__button-icon"
+              />
+              <p class="add-sale__button-text">Calc</p>
+            </button>
+          </div>
+        </div>
+
+        <!-- Product Section -->
+        <div class="add-sale__field add-sale__field--product">
+          <div class="add-sale__label-group">
+            <img
+              src="Icons/expense record.png"
+              alt="what you sold"
+              class="icon"
+            />
+            <label for="product" class="add-sale__label form__label"
+              >What type of expense?</label
+            >
+          </div>
+          <input
+            type="text"
+            placeholder="What did you get..."
+            id="product"
+            name="product"
+            class="add-sale__input form__input"
+          />
+        </div>
+
+        <!-- Extra Notes Section -->
+        <div class="add-sale__field add-sale__field--notes">
+          <div class="add-sale__label-group">
+            <img
+              src="Icons/ExtraNotes.png"
+              alt="extra notes"
+              class="icon"
+            />
+            <label for="extraNotes" class="add-sale__label form__label"
+              >Extra notes (Optional)</label
+            >
+          </div>
+          <input
+            type="text"
+            placeholder="Who you paid, receipt number..."
+            id="extraNotes"
+            name="extraNotes"
+            class="add-sale__input form__input"
+          />
+        </div>
+      </form>
+
+      <!-- Buttons -->
+      <div class="add-sale__actions btn__group">
+        <button class="add-sale__button add-sale__button--save btn btn--primary">
+          RECORD EXPENSES
+        </button>
+        <button class="add-sale__button add-sale__button--cancel btn btn--secondary">
+          CANCEL
+        </button>
+      </div>
+
+      <!-- Tips Section -->
+      <div class="add-sale__tips card card--secondary">
+        <img
+          src="Icons/Insight.png"
+          alt="insight"
+          class="add-sale__tips-icon card__insight"
+        />
+
+        <div class="add-sale__tip card__tip">
+          <img
+            src="Icons/calculatorUsage.png"
+            alt="use calculator"
+            class="add-sale__tip-icon icon"
+          />
+          <p class="add-sale__tip-text">Use calculator to add multiple items</p>
+        </div>
+
+        <div class="add-sale__tip card__tip">
+          <img
+            src="Icons/expense record.png"
+            alt="product sold"
+            class="add-sale__tip-icon icon"
+          />
+          <p class="add-sale__tip-text">
+           Choose category to track spending
+          </p>
+        </div>
+
+        <div class="add-sale__tip card__tip">
+          <img src="Icons/Write.png" alt="user" class="add-sale__tip-icon icon" />
+          <p class="add-sale__tip-text">Write who you paid in notes</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="bottom-nav nav">
+      <div class="bottom-nav__item bottom-nav__item--home nav__item">
+        <img src="Icons/Home (2).png" alt="home" class="bottom-nav__icon" />
+        <p class="bottom-nav__label nav__text ">Home</p>
+      </div>
+
+      <div class="bottom-nav__item bottom-nav__item--reports nav__item">
+        <img src="Icons/Reports.png" alt="reports" class="bottom-nav__icon" />
+        <p class="bottom-nav__label nav__text ">Reports</p>
+      </div>
+
+      <div class="bottom-nav__item bottom-nav__item--help nav__item">
+        <img src="Icons/Help.png" alt="help" class="bottom-nav__icon" />
+        <p class="bottom-nav__label nav__text ">Help</p>
+      </div>
+
+      <div class="bottom-nav__item bottom-nav__item--settings nav__item">
+        <img src="Icons/Settings.png" alt="settings" class="bottom-nav__icon" />
+        <p class="bottom-nav__label nav__text ">Settings</p>
+      </div>
+    </nav>
+  </body>
+</html>

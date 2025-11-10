@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Phosphor Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@latest/src/bold/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css"
+    />
+    <link rel="stylesheet" href="dashboard.css">
+  </head>
+  <body>
+
+    <!-- Dashboard Container -->
+      <div class="dashboard">
+        <div class="dashboard__container">
+        <div class="dashboard__title">
+          <h2 class="dashboard__header__text">Welcome, <span class="username"></span></h2>
+          <div class="dashboard__notification__container">
+            <a class="dashboard__notification__link">
+            <i class="ph-bold ph-bell dashboard__notification__icon"></i>
+            </a>
+          </div>
+        </div>
+        <p class="dashboard__description">Simple bookkeeping for traders, even offline</p>
+       </div>
+        
+
+       <!--Sales, Expenses and Profit Chart-->
+        <div class="chart__section">
+         <canvas id="myChart"></canvas>
+        </div>
+
+        <!--Report Printing Section-->
+        <div class="download__section">
+          <div class="download__section__title">
+            <p class="download__section__text">Print your daily report here</p>
+          </div>
+
+          <div class="download__button">
+            <a class="download__button__link">
+              <img src="Icons/download.svg" alt="download button image">
+            </a>
+          </div>
+        </div>
+
+      <!--See more section-->
+      <div class="see-more">
+        <p class="see-more__text">See more</p>
+        <i class="ph-bold ph-arrow-right"></i>
+      </div>
+
+      <!-- Quick Action Section -->
+      <div class="quick__action__section">
+        <h2 class="quick__action__title">Quick Actions</h2>
+        <div class="quick__action__cards">
+          <a href="add sales.html" class=" sales__action action__link">
+            <div class="sales__action__text__content">
+              <h1 class="sales__action__title action title"></h1>
+              <p class="sales__action__text action text">Money In</p>
+            </div>
+            <img src="Icons/plus.svg" alt="add sales icon" class="action__image"/>
+          </a>
+
+          <div class="sales__action__text__content">
+            <h1 class="expenses__action__title action title">Add expenses</h1>
+            <p class="expenses__action__text action text">Money Out</p>
+          </div>
+          <img src="Icons/plus.svg" alt="add expenses icon" class="action__image"/>
+        </div>
+      </div>
+            
+            <div class="profit-container">
+              <h2 class="profit-title">Your Today's Profit/Loss</h2>
+              <p class="profit-amount">₦<span class="amount__result"></span></p>
+            </div>
+
+          <!-- Bottom Navigation -->
+            <nav class="bottom-nav nav">
+      <div class="bottom-nav__item bottom-nav__item--home nav__item">
+        <img src="Icons/home.png" alt="home" class="bottom-nav__icon" />
+        <p class="bottom-nav__label nav__text ">Home</p>
+      </div>
+
+      <div class="bottom-nav__item bottom-nav__item--reports nav__item">
+        <img src="Icons/report.png" alt="reports" class="bottom-nav__icon" />
+        <p class="bottom-nav__label nav__text ">Reports</p>
+      </div>
+
+      <div class="bottom-nav__item bottom-nav__item--help nav__item">
+        <img src="Icons/help.svg" alt="help" class="bottom-nav__icon" />
+        <p class="bottom-nav__label nav__text ">Help</p>
+      </div>
+
+      <div class="bottom-nav__item bottom-nav__item--settings nav__item">
+        <img src="Icons/settings.jpg" alt="settings" class="bottom-nav__icon" />
+        <p class="bottom-nav__label nav__text ">Settings</p>
+      </div>
+    </nav>
+  </body>
+</html>
