@@ -1,0 +1,89 @@
+/* Reset and base styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #0a1448;
+}
+
+/* Back arrow */
+a {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  color: #0a1448;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Main section */
+section {
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Heading */
+section h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/* Paragraph */
+section p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Input box */
+input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 1rem;
+  outline: none;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #0a1448;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #101f75;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  section h1 {
+    font-size: 1.7rem;
+  }
+}

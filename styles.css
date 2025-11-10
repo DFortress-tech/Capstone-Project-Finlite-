@@ -201,6 +201,9 @@ body.page {
 }
 
 /* ========== WHY-US SECTION ========== */
+.feature-calculator{
+  text-decoration: none;
+}
 .why-us {
   padding: clamp(3rem, 4vw, 7rem);
   text-align: center;

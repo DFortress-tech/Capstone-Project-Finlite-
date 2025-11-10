@@ -1,0 +1,210 @@
+/* === General Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 1.5rem;
+  min-height: 100vh;
+  color: #0b0b0b;
+}
+
+/* === Back Arrow === */
+a i {
+  font-size: 1.7rem;
+  color: #001c54;
+  margin-bottom: 1.2rem;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* === Section Layout === */
+section {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.1rem;
+}
+
+/* === Heading === */
+section h1 {
+  color: #001c54;
+  font-weight: 700;
+  font-size: 1.9rem;
+}
+
+section p {
+  font-size: 0.92rem;
+  color: #4b4b4b;
+  line-height: 1.4;
+}
+.password-link{
+    text-decoration: none;
+}
+
+/* === Inputs === */
+input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  outline: none;
+  background: #fff;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+/* === Forgot + Create account === */
+section > div:nth-of-type(1) {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+}
+
+section > div:nth-of-type(1) p:first-child {
+  color: #d12a2a;
+  cursor: pointer;
+}
+
+section > div:nth-of-type(1) p:last-child {
+  font-weight: 600;
+  color: #000;
+  cursor: pointer;
+}
+
+/* === Login Button === */
+button {
+  padding: 1rem;
+  border: none;
+  border-radius: 30px;
+  background-color: #001c54;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* === No Internet Card === */
+section > div:nth-of-type(2) {
+  background: linear-gradient(135deg, #d4f5f2, #b8caff);
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;
+  margin-top: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+section > div:nth-of-type(2) div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+
+section > div:nth-of-type(2) div i {
+  font-size: 1.3rem;
+  color: #001c54;
+}
+
+section > div:nth-of-type(2) p:first-of-type {
+  font-weight: 600;
+  color: #001c54;
+}
+
+section > div:nth-of-type(2) p:last-of-type {
+  font-size: 0.85rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+section > div:nth-of-type(2) button {
+  width: 100%;
+  background-color: #001c54;
+  color: #fff;
+  border-radius: 25px;
+  font-size: 0.95rem;
+}
+
+/* === Footer text === */
+footer {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: #777;
+  text-align: center;
+}
+
+footer a {
+  color: #0b7ae8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  body {
+    padding: 2rem 1rem;
+  }
+
+  section h1 {
+    font-size: 1.7rem;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+  }
+
+  section > div:nth-of-type(2) {
+    padding: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 1.5rem 1rem;
+  }
+
+  section {
+    gap: 0.9rem;
+  }
+
+  section h1 {
+    font-size: 1.5rem;
+  }
+
+  section p {
+    font-size: 0.85rem;
+  }
+
+  button {
+    padding: 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  a i {
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,160 @@
+/* Container and Section setup */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #f9fafb;
+  color: #001c54;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+section {
+  background: #fff;
+  max-width: 400px;
+  width: 100%;
+  padding: 2rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  box-sizing: border-box;
+}
+
+/* Headings */
+h1 {
+  font-size: 1.9rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+section > p:first-of-type {
+  font-size: 0.7rem;
+  text-align: center;
+  color: #444;
+  margin-bottom: 2rem;
+  padding: 0px 40px;
+}
+
+/* Input Groups */
+.input-group {
+  position: relative;
+  margin-bottom: 1.25rem;
+  width: 100%;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1.2rem;
+  
+}
+
+.input-group .ph-user,
+.input-group .ph-lock {
+  left: 14px;
+}
+
+.input-group .eye-icon {
+  right: 14px;
+  cursor: pointer;
+  pointer-events: auto; /* Make eye icon clickable */
+  color: #777;
+  transition: color 0.2s ease;
+}
+
+.input-group .eye-icon:hover {
+  color: #001c54;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.9rem 3rem; /* Add space for icons on left & right */
+  padding-left: 2.8rem; /* More space for left icon */
+  padding-right: 2.8rem; /* More space for right icon */
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  color: #222;
+  box-sizing: border-box;
+}
+
+.input-group input::placeholder {
+  color: #aaa;
+}
+
+.input-group input:focus {
+  border-color: #001c54;
+  box-shadow: 0 0 0 2px rgba(0, 28, 84, 0.1);
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  background-color: #001c54;
+  border: none;
+  padding: 1rem 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #003080;
+}
+
+/* Links and Text */
+section div p {
+  font-size: 0.9rem;
+  text-align: center;
+  margin: 1rem 0 0;
+}
+
+section div p a {
+  color: #001c54;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+section div p a:hover {
+  text-decoration: underline;
+}
+
+/* Terms text */
+section > p:last-of-type {
+  color: #5a7a74;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+/* Small devices */
+@media (max-width: 420px) {
+  section {
+    padding: 1.5rem 1.8rem;
+    border-radius: 12px;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .input-group input {
+    font-size: 0.95rem;
+    padding: 0.8rem 2.6rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 0.85rem 0;
+  }
+}

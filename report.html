@@ -4,16 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reports - Capstone</title>
-    <link rel="stylesheet" href="index.css"
+    <link rel="stylesheet" href="report.css"
 </head>
 <body>
-    <!-- Top Navigation -->
-    <div class="top-nav">
-        <span class="menu-icon">☰</span>
-        <h1>CAPSTONE</h1>
-        <span></span>
-    </div>
-
+    
     <!-- Main Content -->
     <div class="main-content">
         <!-- Reports Header -->
@@ -32,9 +26,21 @@
                 <span class="search-icon">🔍</span>
                 <input type="text" placeholder="Search by item, category, or notes...">
             </div>
-            <button class="filter-btn">
-                All <span>▼</span>
-            </button>
+<div class="filter-dropdown">
+    <input type="checkbox" id="filter-toggle">
+    <label for="filter-toggle" class="filter-btn">
+        All <span>▼</span>
+    </label>
+
+    <div class="filter-options">
+        <a href="#">This Week</a>
+        <a href="#">Last Week</a>
+        <a href="#">This Month</a>
+        <a href="#">Last Month</a>
+        <a href="#">This Year</a>
+    </div>
+</div>
+    
         </div>
 
         <!-- Summary Cards -->

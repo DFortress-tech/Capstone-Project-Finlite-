@@ -13,27 +13,7 @@
             flex-direction: column;
         }
 
-        /* Top Navigation */
-        .top-nav {
-            background-color: #2d2d2d;
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .menu-icon {
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        .top-nav h1 {
-            font-size: 18px;
-            font-weight: 500;
-            letter-spacing: 2px;
-        }
-
+      
         /* Main Content */
         .main-content {
             flex: 1;
@@ -77,7 +57,7 @@
         /* Search and Filter Section */
         .search-filter {
             display: flex;
-            gap: 10px;
+            gap: 70px;
             margin-bottom: 20px;
             flex-wrap: wrap;
         }
@@ -117,6 +97,45 @@
             gap: 10px;
             font-weight: 500;
         }
+        /* Hide the checkbox */
+.filter-dropdown input[type="checkbox"] {
+    display: none;
+}
+
+/* Dropdown options container */
+.filter-options {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 5px;
+    min-width: 150px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 10;
+    flex-direction: column;
+}
+
+/* Show options when checkbox is checked */
+.filter-dropdown input[type="checkbox"]:checked ~ .filter-options {
+    display: flex;
+}
+
+/* Dropdown items */
+.filter-options a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+/* Hover effect */
+.filter-options a:hover {
+    background-color: #007bff; 
+    color: white;
+}
+
 
         /* Summary Cards */
         .summary-cards {

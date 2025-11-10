@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="stylesheet" href="signup.css">
   </head>
   <body>
     <a><i class="ph ph-share-fat"></i></a>
@@ -16,13 +20,40 @@
       </p>
 
       <!-- User Inputs -->
-      <input type="email" name="email" id="email" plaaceholder="Username or Email">
+       <div class="input-group">
+    <i class="ph ph-user"></i>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      placeholder="Username or Email"
+    />
+  </div>
+
+  <div class="input-group">
+    <i class="ph ph-lock"></i>
+    <input type="password" name="password" id="password" placeholder="Password" />
+    <i class="ph ph-eye eye-icon"></i>
+  </div>
+
+  <div class="input-group">
+    <i class="ph ph-lock"></i>
+    <input
+      type="password"
+      name="confirm-password"
+      id="confirm-password"
+      placeholder="Confirm Password"
+    />
+    <i class="ph ph-eye eye-icon"></i>
+  </div>
+<!--       
+      <input type="email" name="email" id="email" placeholder="Username or Email">
       <input type="password" name="password" id="password" placeholder="Password">
-      <input type="password" name="password" id="password" placeholder="Password">
+      <input type="password" name="password" id="password" placeholder="Password"> -->
 
       <!-- Login if you alredy have an account-->
       <div>
-        <p>Already have an account? <a href="">Login</a></p>
+        <p>Already have an account? <a href="SignIn.html">Login</a></p>
       </div>
 
       <!-- Agreeing to terms and conditions -->

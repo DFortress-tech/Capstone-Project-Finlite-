@@ -12,16 +12,7 @@
             flex-direction: column;
         }
 
-        /* Top Navigation */
-        .top-nav {
-            background-color: #2d2d2d;
-            color: white;
-            padding: 15px 20px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
+       
         .menu-icon {
             font-size: 24px;
             cursor: pointer;
