@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile & Settings</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="stylesheet" href="settings.css"/>
+</head>
+<body>
+  <div class="page">
+
+    <!-- Top bar -->
+    <header class="topbar">
+      <a href="dashboard.html" class="back" aria-label="Go back">
+        <!-- Left arrow -->
+               <i class="fa-solid fa-arrow-left" style="font-size:26px;"></i>
+
+      </a>
+
+      <!-- Avatar (not overlapped) -->
+      <div class="avatar-wrap">
+        <img src="https://i.pravatar.cc/100?img=5" alt="Profile" class="avatar"/>
+        <span class="avatar-dot" aria-hidden="true"></span>
+      </div>
+    </header>
+
+    <!-- Form -->
+    <section class="card">
+      <h2 class="section-title">Personal Details</h2>
+
+      <label class="input-wrap">
+        <span class="icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M20 21a8 8 0 10-16 0" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="12" cy="8" r="4" stroke="#7A7A7A" stroke-width="2"/>
+          </svg>
+        </span>
+        <input type="text" placeholder="Username or Email"/>
+      </label>
+
+      <label class="input-wrap">
+        <span class="icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="10" width="18" height="11" rx="2" stroke="#7A7A7A" stroke-width="2"/>
+            <path d="M9 10V7a3 3 0 016 0v3" stroke="#7A7A7A" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </span>
+        <input type="password" placeholder="Password"/>
+        <a href="#" class="field-link">Forgot password?</a>
+      </label>
+
+      <label class="input-wrap">
+        <span class="icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M3 9l9-6 9 6v9a3 3 0 01-3 3H6a3 3 0 01-3-3V9z" stroke="#7A7A7A" stroke-width="2"/>
+          </svg>
+        </span>
+        <input type="text" placeholder="Enter Business Address"/>
+      </label>
+
+      <label class="input-wrap">
+        <span class="icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M22 16.92v2a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.15 13.8 19.79 19.79 0 011.08 5.17 2 2 0 013.05 3h2a2 2 0 012 1.72c.12.89.32 1.76.6 2.59a2 2 0 01-.45 2.11L6.1 10.1a16 16 0 006.8 6.8l.7-1.1a2 2 0 012.11-.45c.83.28 1.7.48 2.59.6A2 2 0 0122 16.92z" stroke="#7A7A7A" stroke-width="2"/>
+          </svg>
+        </span>
+        <input type="tel" placeholder="Phone Number"/>
+      </label>
+
+      <label class="input-wrap">
+        <span class="icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2l2.39 7.36H22l-6.2 4.51L17.8 22 12 17.77 6.2 22l2-8.13L2 9.36h7.61L12 2z" stroke="#7A7A7A" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <input type="text" placeholder="Country"/>
+      </label>
+
+      <button class="btn-primary">Save</button>
+    </section>
+
+    <!-- List card -->
+    <section class="list-card">
+      <a href="#" class="list-item">
+        <span class="li-left">
+          <span class="li-icon">❓</span>
+          <span>Help and support</span>
+        </span>
+        <span class="chev">›</span>
+      </a>
+
+      <a href="#" class="list-item">
+        <span class="li-left">
+          <span class="li-icon">☁️</span>
+          <span>Backup Information</span>
+        </span>
+        <span class="chev">›</span>
+      </a>
+
+      <a href="#" class="list-item">
+        <span class="li-left">
+          <span class="li-icon">ℹ️</span>
+          <span>About this App</span>
+        </span>
+        <span class="chev">›</span>
+      </a>
+    </section>
+
+    <!-- Logout -->
+    <p class="logout-wrap">
+      <a href="landing.html" class="logout-link">Logout</a>
+    </p>
+
+    <!-- Bottom nav -->
+    <nav class="bottom-nav">
+      <a href="#" class="nav-item"><span class="nav-emoji">🏠</span><span>Home</span></a>
+      <a href="#" class="nav-item"><span class="nav-emoji">📊</span><span>Reports</span></a>
+      <a href="#" class="nav-item"><span class="nav-emoji">🎧</span><span>Help</span></a>
+      <a href="#" class="nav-item"><span class="nav-emoji">⚙️</span><span>Settings</span></a>
+    </nav>
+
+  </div>
+</body>
+</html>

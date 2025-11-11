@@ -1,4 +1,5 @@
 
+
 body {
   margin: 0;
   padding: 0;
@@ -19,19 +20,13 @@ body {
 
 .top-row {
   display: flex;
-  justify-content: right;
+  justify-content: flex-start;
 }
 
 .back {
   font-size: 30px;
   text-decoration: none;
   color: #00204a;
-}
-
-.skip {
-  text-decoration: none;
-  color: #000;
-  font-weight: bold;
 }
 
 .content-row {
@@ -89,6 +84,10 @@ p {
 
 .active {
   background: #00204a;
+}
+
+.last {
+  color: #0050ff;
 }
 
 @media (max-width: 800px) {

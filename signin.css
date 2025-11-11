@@ -97,6 +97,14 @@ button {
   cursor: pointer;
   transition: all 0.2s ease;
 }
+.log-btn{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.btn-link{
+  text-decoration: none;
+}
 
 button:hover {
   opacity: 0.9;

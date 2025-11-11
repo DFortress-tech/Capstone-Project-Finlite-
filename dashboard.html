@@ -1,98 +1,65 @@
+<!-- HTML (dashboard.html) -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
-     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Phosphor Icons -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@latest/src/bold/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/bold/style.css"
-    />
-    <link rel="stylesheet" href="dashboard.css">
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <div class="dashboard-container">
 
-    <!-- Dashboard Container -->
-      <div class="dashboard">
-        <div class="dashboard__container">
-        <div class="dashboard__title">
-          <h2 class="dashboard__header__text">Welcome, <span class="username"></span></h2>
-          <div class="dashboard__notification__container">
-            <a class="dashboard__notification__link">
-            <i class="ph-bold ph-bell dashboard__notification__icon"></i>
-            </a>
-          </div>
-        </div>
-        <p class="dashboard__description">Simple bookkeeping for traders, even offline</p>
-       </div>
-        
-
-       <!--Sales, Expenses and Profit Chart-->
-        <div class="chart__section">
-         <canvas id="myChart"></canvas>
-        </div>
-
-        <!--Report Printing Section-->
-        <div class="download__section">
-          <div class="download__section__title">
-            <p class="download__section__text">Print your daily report here</p>
-          </div>
-
-          <div class="download__button">
-            <a class="download__button__link">
-              <img src="Icons/download.svg" alt="download button image">
-            </a>
-          </div>
-        </div>
-
-      <!--See more section-->
-      <div class="see-more">
-        <p class="see-more__text">See more</p>
-        <i class="ph-bold ph-arrow-right"></i>
+    <header class="top-header">
+      <div>
+        <h2 class="welcome-text">WELCOME T,</h2>
+        <p class="sub-text">Simple bookkeeping for traders, even offline!</p>
       </div>
+      <a class="notify-btn"><img src="Icons/bell.svg" alt="notify"></a>
+    </header>
 
-      <!-- Quick Action Section -->
-      <div class="quick__action__section">
-        <h2 class="quick__action__title">Quick Actions</h2>
-        <div class="quick__action__cards">
-          <div class="sales__action__card action__card">
-            <a href="add sales.html" class=" sales__action action__link">
-            <div class="sales__action__text__content">
-              <h1 class="sales__action__title action title"></h1>
-              <p class="sales__action__text action text">Money In</p>
-            </div>
-            <img src="Icons/plus.svg" alt="add sales icon" class="action__image"/>
-          </a>
-          </div>
+    <div class="print-box">
+      <p>Print your daily report here</p>
+      <a class="print-btn"><img src="Icons/download.svg" alt="download"></a>
+    </div>
 
-          <div class="expenses__action__card action__card">
-            <a href="add expenses.html" class=" expenses__action action__link">
-            <div class="expenses__action__text__content content">
-              <h1 class="expenses__action__title action title">Add expenses</h1>
-              <p class="expenses__action__text action text">Money Out</p>
-          </div>
-          <img src="Icons/plus.svg" alt="add expenses icon" class="action__image"/>
-          </a>
-        </div>
+    <a class="see-more-link" href="#">
+      <div class="see-more-box">
+        <p>See more</p>
+        <span class="arrow">→</span>
       </div>
-            
-            <div class="profit-container">
-              <h2 class="profit-title">Your Today's Profit/Loss</h2>
-              <p class="profit-amount">₦<span class="amount__result"></span></p>
-            </div>
- <!-- Bottom Navigation -->
+    </a>
+
+    <section class="quick-actions">
+      <h3>Quick Actions</h3>
+      <div class="action-grid">
+
+        <a href="add sales.html" class="action-card green">
+          <div>
+            <h2>Add sale</h2>
+            <p>Money In</p>
+          </div>
+          <span class="plus">+</span>
+        </a>
+
+        <a href="add expenses.html" class="action-card orange">
+          <div>
+            <h2>Add expenses</h2>
+            <p>Money Out</p>
+          </div>
+          <span class="plus">+</span>
+        </a>
+
+      </div>
+    </section>
+
+    <div class="profit-box">
+      <span class="emoji">💰</span>
+      <p>Your Today’s Profit</p>
+      <h2>₦7,000.00</h2>
+    </div>
+
+    <!-- Bottom Navigation -->
     <div class="bottom-nav">
       <a href="dashboard.html" class="dd-link">
         <div class="nav-item">
@@ -107,18 +74,23 @@
         </div>
       </a>      
       
-      <a href="help.html" class="dd-link">
+      <a href="" class="dd-link">
         <div class="nav-item">
             <span class="nav-icon">🎧</span>
             <span>Help</span>
         </div>
       </a>
-      <a href="setting.html" class="dd-link">
+      <a href="settings.html" class="dd-link">
         <div class="nav-item">
             <span class="nav-icon">⚙️</span>
             <span>Settings</span>
         </div>
       </a>
+      
     </div>
+
+  </div>
 </body>
 </html>
+
+
