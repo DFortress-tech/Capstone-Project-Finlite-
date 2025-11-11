@@ -131,6 +131,7 @@ body.page {
   display: flex;
   gap: 2.4rem;
   list-style: none;
+  transition: all 0.3s ease;
 }
 
 .nav__link {
@@ -201,21 +202,27 @@ body.page {
 }
 
 /* ========== WHY-US SECTION ========== */
-.feature-calculator{
+.feature-calculator {
   text-decoration: none;
 }
+
 .why-us {
   padding: clamp(3rem, 4vw, 7rem);
   text-align: center;
 }
 
-.why-us__title, .features__title, .steps__title, .cta__title {
+.why-us__title,
+.features__title,
+.steps__title,
+.cta__title {
   font-size: var(--fs-lg);
   color: var(--dark-blue-1);
   margin-bottom: 1rem;
 }
 
-.why-us__description, .features__description, .cta__description {
+.why-us__description,
+.features__description,
+.cta__description {
   color: var(--dark-neutral-2);
   max-width: 70ch;
   margin: 0 auto 2rem;
@@ -277,14 +284,15 @@ body.page {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
 }
 
-.feature-card__title, .step__title {
+.feature-card__title,
+.step__title {
   color: var(--dark-blue-1);
   font-size: var(--fs-md);
   font-weight: 700;
   margin-top: 1rem;
 }
 
-.feature__icon{
+.feature__icon {
   background-color: var(--primary-blue-1);
   width: 2rem;
   height: 2rem;
@@ -294,6 +302,7 @@ body.page {
   height: 0.4rem;
   width: 0.4rem;
 }
+
 .feature-card__text {
   color: var(--dark-neutral-2);
   font-size: var(--fs-sm);
@@ -354,7 +363,8 @@ body.page {
   padding: clamp(3rem, 4vw, 7rem);
 }
 
-.cta__title, .cta__description {
+.cta__title,
+.cta__description {
   color: inherit;
 }
 
@@ -366,8 +376,6 @@ body.page {
   margin-top: 1.6rem;
 }
 
-
-
 /* ========== FOOTER ========== */
 .footer {
   padding: clamp(1.6rem, 2vw, 3.2rem);
@@ -375,11 +383,10 @@ body.page {
   color: var(--dark-neutral-2);
   background: var(--neutral-light-2);
   border-top: 1px solid #ddd;
-
 }
 
 .footer__text {
- font-size:1.6rem;
+  font-size: 1.6rem;
 }
 
 .footer__links {
@@ -389,7 +396,7 @@ body.page {
   margin-top: 1rem;
 }
 
-.footer__link{
+.footer__link {
   text-decoration: none;
   font-size: 1.6rem;
   color: inherit;
@@ -402,6 +409,7 @@ body.page {
   .nav__search {
     display: none;
   }
+
   .ph-list {
     display: block;
   }
@@ -411,9 +419,11 @@ body.page {
     text-align: center;
     align-items: center;
   }
+
   .hero__content {
     flex: 1 1 100%;
   }
+
   .hero__image {
     max-width: 90%;
   }
@@ -423,11 +433,13 @@ body.page {
   html {
     font-size: 55%;
   }
+
   .why-us__features,
   .features__list,
   .steps__list {
     grid-template-columns: 1fr;
   }
+
   .header__title {
     display: none;
   }
@@ -453,13 +465,14 @@ body.page {
     font-size: 50%;
   }
 
-  .hero {
-    align-items: center;
-    text-align: center;
-  }
   .btn {
     font-size: var(--fs-sm);
     padding: 0.8rem 1.2rem;
+  }
+
+  .hero {
+    align-items: center;
+    text-align: center;
   }
 
   .hero__buttons {
@@ -471,4 +484,27 @@ body.page {
     height: 4rem;
     width: 4rem;
   }
+}
+
+/* ===== MOBILE MENU TOGGLE ===== */
+.nav__list--active {
+  display: flex !important;
+  flex-direction: column;
+  position: absolute;
+  top: 7rem;
+  right: 2rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 1.6rem;
+  z-index: 200;
+}
+
+.nav__list--active .nav__item {
+  margin: 1rem 0;
+}
+
+.nav__list--active .nav__link {
+  color: var(--dark-blue-1);
+  font-size: 1.6rem;
 }

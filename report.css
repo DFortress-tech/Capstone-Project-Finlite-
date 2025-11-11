@@ -389,6 +389,9 @@
         .nav-icon {
             font-size: 24px;
         }
+        .dd-link{
+            text-decoration: none;
+        }
 
         /* Auth Buttons */
         .auth-section {
