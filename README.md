@@ -47,7 +47,7 @@ After submitting, they’re taken to their **dashboard** where they can start us
 
 The dashboard is simple and organized with clear buttons for every task:
 * **Add Sales:** opens **Sales** to record the items sold and amount gotten. 
-* **Add Expenses:** opens **Settings** to record purchases or running costs.
+* **Add Expenses:** opens **Expenses** to record purchases or running costs.
 * **Calculate Profit:** Finlite instantly shows total profit or loss for the day.
 * **View Report:** See clean summaries and charts of sales, expenses, and profits.
 * **Download Report:** Save or print reports as PDF.
